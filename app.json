@@ -1,0 +1,69 @@
+{
+  "name": "ymi App Custom Example",
+  "description": "This app does one little thing, and does it well.",
+  "repository": "https://github.com/Yamidev/ymi-iot.git",
+  "repository_token": "***************************",
+  "keywords": [
+    "productivity",
+    "HTML5",
+    "scalpel"
+  ],
+  "website": "https://small-sharp-tool.com/",
+  "logo": "https://small-sharp-tool.com/logo.svg",
+  "index_route": "welcome",
+  "scripts": {
+    "postdeploy": "bundle exec rake bootstrap"
+  },
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 2,
+      "size": "Performance-M"
+    }
+  },
+  "menu": {
+    "New Form": {
+      "description": "A form to put new itens.",
+      "route": "new"
+    },
+    "List Rows": {
+      "description": "List all rows in module.",
+      "route": "list"
+    }
+  },
+  "image": "heroku/ruby",
+  "addons": [
+    "openredis",
+    {
+      "plan": "mongolab:shared-single-small",
+      "as": "MONGO"
+    },
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/stomita/heroku-buildpack-phantomjs"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "bundle exec rake test"
+      }
+    }
+  }
+}
