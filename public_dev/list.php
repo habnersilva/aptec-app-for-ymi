@@ -4,9 +4,6 @@
 
 // EXEMPLE OF FUNCTION TO ALLOW ACCESS USING FEATURES .   authorize_access(212);
 
-$retorno = file_get_contents("http://www.ig.com.br");
-echo $retorno;
-
 ?>
 
 <style>
