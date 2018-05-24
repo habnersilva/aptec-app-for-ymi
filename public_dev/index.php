@@ -1,5 +1,14 @@
 <!-- This is an example page calling the phpsecinfo() function -->
-<?php require_once('PhpSecInfo/PhpSecInfo.php'); ?>
+<?php 
+$inipath = php_ini_loaded_file();
+
+if ($inipath) {
+    echo 'Loaded php.ini: ' . $inipath;
+} else {
+    echo 'A php.ini file is not loaded';
+}
+
+require_once('PhpSecInfo/PhpSecInfo.php'); ?>
 <?php phpsecinfo(); ?>
 
 <?php
