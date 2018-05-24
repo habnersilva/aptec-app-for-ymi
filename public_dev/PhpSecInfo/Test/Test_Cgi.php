@@ -9,7 +9,7 @@
 /**
  * require the main PhpSecInfo class
  */
-require_once('PhpSecInfo/Test/Test.php');
+require_once(__DIR__.'/../../PhpSecInfo/Test/Test.php');
 
 
 
