@@ -1,6 +1,7 @@
 <!-- This is an example page calling the phpsecinfo() function -->
 <?php
-echo __DIR__;
+phpinfo();
+die();
 
 ?>
 <?php require_once('PhpSecInfo/PhpSecInfo.php'); ?>
