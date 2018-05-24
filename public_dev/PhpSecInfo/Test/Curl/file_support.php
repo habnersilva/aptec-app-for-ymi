@@ -9,7 +9,7 @@
 /**
  * require the PhpSecInfo_Test_Curl class
  */
-require_once('PhpSecInfo/Test/Test_Curl.php');
+require_once(__DIR__.'PhpSecInfo/Test/Test_Curl.php');
 
 /**
  * Test class for CURL file_support
