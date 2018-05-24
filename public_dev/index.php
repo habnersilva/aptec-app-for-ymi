@@ -1,9 +1,4 @@
 <!-- This is an example page calling the phpsecinfo() function -->
-<?php
-phpinfo();
-die();
-
-?>
 <?php require_once('PhpSecInfo/PhpSecInfo.php'); ?>
 <?php phpsecinfo(); ?>
 
