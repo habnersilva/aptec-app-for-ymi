@@ -18,4 +18,3 @@ http://ymi.io/newApp
 Configure a webhook to send all push notifications for
 
 http://yami.dev.ymi.com.br/deploy/deploy_custom.php 
-
